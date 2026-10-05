@@ -8,16 +8,19 @@ export default async function Home() {
 
   if (!isLoggedIn) {
     return (
-      <main>
-        <h1>กรุณาเข้าสู่ระบบก่อนใช้งาน</h1>
-        <AuthButtons isLoggedIn={false} />
-      </main>
+      <div className="login-screen">
+        <div className="login-card">
+          <h1>เข้าสู่ระบบ</h1>
+          <p>กรุณาเข้าสู่ระบบด้วยบัญชี Google ก่อนจัดการสินค้า</p>
+          <AuthButtons isLoggedIn={false} />
+        </div>
+      </div>
     );
   }
 
   return (
     <>
-      <header>
+      <header className="auth-bar">
         <AuthButtons isLoggedIn userName={session?.user?.name} />
       </header>
       <ProductExplorer />

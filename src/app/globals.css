@@ -279,6 +279,85 @@
     border-color: var(--danger);
   }
 
+  /* ===== แถบผู้ใช้ด้านบน: ชื่อ + ปุ่ม Logout ชิดขวา ===== */
+  .auth-bar {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 20px 16px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .auth-bar + main {
+    padding-top: 16px;
+  }
+
+  .auth-bar > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 6px 6px 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+  }
+
+  .auth-bar span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .auth-bar button {
+    height: 34px;
+    padding: 0 16px;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--danger);
+    border: 1px solid var(--border);
+    font-weight: 500;
+  }
+
+  .auth-bar button:hover:not(:disabled) {
+    background: #fef2f2;
+    border-color: var(--danger);
+  }
+
+  /* ===== หน้าเข้าสู่ระบบ: การ์ดกลางจอ ===== */
+  .login-screen {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 24px 16px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 32px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .login-card h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .login-card p {
+    margin: 6px 0 28px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .login-card button {
+    width: 100%;
+  }
+
   /* ===== มือถือ: ให้ทุกอย่างเรียงเป็นคอลัมน์เดียว ===== */
   @media (max-width: 760px) {
     main {
